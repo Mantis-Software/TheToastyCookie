@@ -1,0 +1,391 @@
+body
+{
+    max-width: 1200px;
+    margin: auto;
+
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.menu-logo
+{
+    width: 150px;
+}
+
+.menu-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding-bottom: 100px;
+}
+
+.menu-options-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.hero-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-hero
+{
+    width: 48%;
+}
+
+.right-hero
+{
+    width: 48%;
+}
+
+.hero-image
+{
+    width:450px;
+}
+
+.hero-text
+{
+    font-size: 60px;
+}
+
+.hero-button
+{
+    background-color: black;
+    border-radius: 16px;
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+}
+
+.cookie-break
+{
+    width:250px;
+}
+
+.blank-spacer
+{
+    height:100px;
+}
+
+.menu-items-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu-items-title-text
+{
+    font-size: 50px;
+}
+
+.menu-items-list
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-items-item
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-items-item-image
+{
+    width: 250px;
+}
+
+.menu-items-item-title
+{
+    font-size: 20px;
+}
+
+.services-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-title
+{
+    font-size: 50px;
+}
+
+.service-item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.service-image
+{
+    width: 200px;
+    border-radius: 50px;
+}
+
+.service-item-text
+{
+    padding: 30px;
+}
+
+.service-item-text-title
+{
+    font-size: 30px;
+}
+
+.service-item-text-examples
+{
+    font-size: 16px;
+    color: grey;
+    font-style: italic;
+}
+
+.service-item-order-arrow
+{
+    width:30px;
+}
+
+.service-item-order
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cookie-delivery-break
+{
+    width:500px
+}
+
+.footer-container
+{
+    background-color: #290c03;
+    margin-top: -130px;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: center;
+    height: 500px;
+    padding-top: 30px;
+}
+
+.footer-logo
+{
+    width: 200px;
+    border-radius: 100%;
+    padding: 30px;
+}
+
+.footer-links-title
+{
+    font-size: 25px;
+    color: white;
+}
+
+.footer-hours-title
+{
+    font-size: 25px;
+    color: white;
+}
+
+.footer-links-container
+{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+}
+
+.footer-links-text
+{
+    color: white;
+}
+
+.footer-hours-container
+{
+    width:24%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+}
+
+.footer-contact-container
+{
+    width:23%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+}
+
+@media (max-width: 500px)
+{
+    body
+    {
+
+        font-family: "Urbanist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .menu-options-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 20px;
+
+        font-family: "Urbanist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .hero-container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+
+    }
+    .hero-text
+    {
+        font-size: 40px;
+    }
+
+    .hero-button
+    {
+        width:100px;
+        background-color: black;
+        border-radius: 16px;
+        font-size: 17px;
+        color: white;
+        padding: 10px;
+    }
+
+
+    .hero-image
+    {
+        display: none;
+    }
+
+    .left-hero
+    {
+        width: 100%;
+    }
+
+    .right-hero
+    {
+        width: 0%;
+    }
+
+    .cookie-break
+    {
+        width:150px;
+    }
+    .cookie-delivery-break
+    {
+        width:300px
+    }
+
+    .services-title
+    {
+        font-size: 20px;
+    }
+
+    .menu-items-title-text
+    {
+        font-size: 20px;
+    }
+
+    .menu-items-item-image
+    {
+        width: 200px;
+    }
+
+    .service-item
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    .footer-container
+    {
+        background-color: #290c03;
+        margin-top: -77px;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: center;
+        height: 1300px;
+        padding-left: 30px;
+    }
+
+
+    .footer-links-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: flex-start;
+        width: 80%;
+    }
+    .footer-hours-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: flex-start;
+        width: 80%;
+    }
+    .footer-contact-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: flex-start;
+        width: 80%;
+    }
+}
