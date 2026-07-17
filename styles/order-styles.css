@@ -1,0 +1,407 @@
+body
+{
+    max-width: 1200px;
+    margin: auto;
+
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.order-type-page
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.order-title 
+{
+    font-size: 60px;
+}
+
+.gift-occasion-title
+{
+    font-size: 60px;
+}
+
+.order-type-options
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+.personal-order-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../images/personal-service-tint.png');
+    
+    width: 300px;
+    height: 300px;
+
+    background-repeat: no-repeat;
+    background-attachment:local;
+    background-size:cover;
+    color: white;
+    font-size: 30px;
+
+}
+
+.gift-order-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../images/gift-service-tint.png');
+    
+    width: 300px;
+    height: 300px;
+
+    background-repeat: no-repeat;
+    background-attachment:local;
+    background-size:cover;
+    color: white;
+    font-size: 30px;
+}
+
+.catering-order-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../images/catering-service-tint.png');
+    
+    width: 300px;
+    height: 300px;
+
+    background-repeat: no-repeat;
+    background-attachment:local;
+    background-size:cover;
+    color: white;
+    font-size: 30px;
+}
+
+.order-type-options div:hover {
+  transform: scale(1.05);
+}
+
+.gift-occasion-page
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.gift-occasion-options
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+.gift-occasion-item-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 200px;
+
+    border-style: solid;
+}
+
+.gift-occasion-options div:hover {
+  transform: scale(1.05);
+}
+
+.cookie-selection-page
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.cookie-selection-title
+{
+    font-size: 60px;
+}
+
+.cookie-selection-batch-options
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+
+}
+
+.cookie-batch-item-box-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 50%;
+}
+
+.cookie-batch-item-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 100px;
+
+    border-style: solid;
+}
+
+.cookie-selection-cookie-options
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+
+}
+
+.cookie-selection-cookie-option-item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.cookie-selection-cookie-option-item-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+.cookie-selection-cookie-option-item
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+
+    border-style: solid;
+    margin: 30px;
+}
+
+.cookie-selection-cookie-option-item img
+{
+    width: 150px;
+}
+
+.batch-options-title
+{
+    font-size: 30px;
+}
+
+.cookie-live-count
+{
+    font-size: 30px;
+}
+
+.cookie-batch-item-box-container div:hover
+{
+  transform: scale(1.05);
+}
+
+.cookie-selection-continue-button
+{
+    border-radius: 16px;
+    color: white;
+    background-color: black;
+    width: 200px;
+    height:30px;
+
+    padding: 10px;
+    text-align: center;
+
+    font-size: 20px;
+}
+
+
+.submit-order-page
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.submit-order-page-left-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 48%;
+
+}
+
+.submit-order-page-right-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 48%;
+
+}
+
+.submit-order-page-title-text
+{
+    font-size: 35px;
+}
+
+.extra-gift-selection
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 0.5px;
+}
+
+.extra-gift-selection-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+
+}
+
+.extra-gift-selection-container div:hover
+{
+  transform: scale(1.05);
+}
+
+.gift-custom-message-textarea
+{
+    width:500px;
+    height:200px
+}
+
+.delivery-date-time-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.delivery-date-input-container
+{
+    padding-right:20px;
+}
+
+.submit-order-page-button
+{
+    background-color: black;
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+}
+
+@media (max-width: 500px)
+{
+    .order-type-options
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gift-occasion-options
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .cookie-batch-item-box-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+
+    .submit-order-page
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+
+        padding: 30px;
+    }
+
+    .gift-custom-message-textarea
+    {
+        width:300px;
+        height:200px
+    }
+}

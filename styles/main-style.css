@@ -9,6 +9,14 @@ body
     font-style: normal;
 }
 
+.menu-options-container a
+{
+    text-decoration: none;
+    color:black;
+}
+
+
+
 .menu-logo
 {
     width: 150px;
@@ -184,6 +192,12 @@ body
     align-items: center;
 }
 
+.service-item-order a
+{
+    text-decoration: none;
+    color:black;
+}
+
 .cookie-delivery-break
 {
     width:500px
@@ -232,6 +246,7 @@ body
 .footer-links-text
 {
     color: white;
+    text-decoration: none;
 }
 
 .footer-hours-container

@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>The Toasty Cookie</title>
+        <link rel="icon" type="image/x-icon" href="./images/chef_toasty.ico">
+
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+        <link rel="stylesheet" href="./styles/order-styles.css">
+        <link rel="stylesheet" href="./styles/main-style.css">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Menu Container-->
+        <div>
+            <div class="menu-container">
+                <!--Image-->
+                <div>
+                    <img src="./images/logo.png" class="menu-logo"/>
+                </div>
+
+                <!--Options-->
+                <div class="menu-options-container">
+                    <a href="./index.html">Home</a>
+                    <a href="./index.html#services">Services</a>
+                    <a href="./index.html#menu">Menu</a>
+                    <a href="./order.html">Order</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Main Container-->
+        <div id="main-container">
+            
+            <div class="order-type-page">
+                <div>
+                    <p class="order-title">Order Type</p>
+                </div>
+
+                <div class="order-type-options">
+                    <div class="personal-order-box" onclick="change_page('COOKIE_SELECTION_PAGE', 'ORDER_TYPE', 'PERSONAL')">
+                        <p>Personal Order</p>
+                    </div>
+                    <div class="gift-order-box" onclick="change_page('GIFT_OCCASION_TYPE_PAGE', 'ORDER_TYPE', 'GIFT')">
+                        <p>Gift Order</p>
+                    </div>
+                    <div class="catering-order-box" onclick="change_page('COOKIE_SELECTION_PAGE', 'ORDER_TYPE', 'CATERING')">
+                        <p>Catering Order</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+<script type="text/javascript" src="./scripts.js"></script>
+</html>
