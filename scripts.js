@@ -40,9 +40,11 @@ var COOKIE_SELECTION_PAGE = `
                     <div class="cookie-batch-item-box-container">
                         <div class="cookie-batch-item-box" onclick="display_cookie_selection('HALF_DOZEN')">
                             <p>Half Dozen</p>
+                            <p id="hd-batch-price">$10.00</p>
                         </div>
                         <div class="cookie-batch-item-box" onclick="display_cookie_selection('DOZEN')">
-                            <p>Full Dozen</p>
+                            <p>Dozen</p>
+                            <p id="d-batch-price">$15.00</p>
                         </div>
                     </div>
                 </div>
@@ -124,11 +126,13 @@ var GIFT_ORDER_INFORMATION_PAGE = `
                         <p>All gifts will come with a balloon and a card. You can select an extra gift to add to your package. Your will also come with a custom card that you can write a message for at no charge.</p>
                         <p style="color:red;">* <span style="color:black;">Required</span></p>
                     </div>
+                    <!--
 
                     <div>
                         <p>Add Extra Gift?<span style="color:red;">*</span></p>
-                    </div>
+                    </div>-->
                     <!--Extra Gifts Selection-->
+                    <!--
                     <div class="extra-gift-selection-container">
                         <div class="extra-gift-selection" id="extra-gift-teddybear" onclick="select_extra_gift('TEDDY_BEAR', 'extra-gift-teddybear')">
                             <img src="https://placehold.co/50">
@@ -144,7 +148,7 @@ var GIFT_ORDER_INFORMATION_PAGE = `
                             <img src="https://placehold.co/50">
                             <p>None</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!--Gift Message-->
                     <div>
@@ -390,6 +394,12 @@ function change_page(page_name_variable, variable_name_str, variable_value)
 {
     update_order_variable_button_press(variable_name_str, variable_value);
     populate_order_page(page_name_variable);
+
+    if(page_name_variable == "COOKIE_SELECTION_PAGE" && variable_name_str == "GIFT_OCCASION")
+    {
+        document.getElementById("hd-batch-price").innerHTML = "$25.00" 
+        document.getElementById("d-batch-price").innerHTML =  "$30.00"
+    }
 }
 
 function load_event_listener()
@@ -444,7 +454,7 @@ function populate_cookie_selection_list()
     let mm_list = ORDER_VARIABLES.get("NUM_MM") ? "<p>" + String(ORDER_VARIABLES.get("NUM_MM"))  + " X M&M </p>" : "";
     let double_chocoloate_list = ORDER_VARIABLES.get("NUM_DOUBLE_CHOCOLATE") ? "<p>" + String(ORDER_VARIABLES.get("NUM_DOUBLE_CHOCOLATE"))  + " X Double Chocolate </p>" : "";
     let oatmeal_list = ORDER_VARIABLES.get("NUM_OATMEAL") ? "<p>" + String(ORDER_VARIABLES.get("NUM_OATMEAL"))  + " X Oatmeal </p>" : "";
-
+    
     let cookie_total_list_string_array = [chocoloate_chip_list, mm_list, double_chocoloate_list, oatmeal_list]
     for(let i = 0; i <= 3; i++)
     {
@@ -452,6 +462,20 @@ function populate_cookie_selection_list()
         {
             cookie_list_html+= (cookie_total_list_string_array[i]);
         }
+    }
+
+    if(ORDER_VARIABLES.get("BATCH_OPTION") == "DOZEN" && ORDER_VARIABLES.get("ORDER_TYPE") == "GIFT")
+    {
+        cookie_list_html += "<br><hr><b><p>Subtotal: $30.00</p></b>"
+    }else if(ORDER_VARIABLES.get("BATCH_OPTION") == "HALF_DOZEN" && ORDER_VARIABLES.get("ORDER_TYPE") == "GIFT")
+    {
+        cookie_list_html += "<br><hr><b><p>Subtotal: $25.00</p></b>"
+    }else if(ORDER_VARIABLES.get("BATCH_OPTION") == "DOZEN" && ORDER_VARIABLES.get("ORDER_TYPE") == "PERSONAL")
+    {
+        cookie_list_html += "<br><hr><b><p>Subtotal: $15.00</p></b>"
+    }else if(ORDER_VARIABLES.get("BATCH_OPTION") == "HALF_DOZEN" && ORDER_VARIABLES.get("ORDER_TYPE") == "PERSONAL")
+    {
+        cookie_list_html += "<br><hr><b><p>Subtotal: $10.00</p></b>"
     }
     document.getElementById("cookie-selected-list-div").innerHTML = cookie_list_html;
 }
@@ -491,6 +515,9 @@ function save_cookie_selection()
         populate_order_page("PERSONAL_ORDER_INFORMATION_PAGE");
     }
     populate_cookie_selection_list();
+
+    document.getElementById("gift-delivery-date").min = new Date().getFullYear() + "-" +  parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate()
+
 }
 
 function save_all_gift_delivery_information()
