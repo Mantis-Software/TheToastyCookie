@@ -9,9 +9,9 @@ var GIFT_OCCASION_TYPE_PAGE = `
                         <img src="./images/birthday-icon.png">
                         <p>Birthday</p>
                     </div>
-                    <div class="gift-occasion-item-box" onclick="change_page('COOKIE_SELECTION_PAGE', 'GIFT_OCCASION', 'GRADUATION')">
-                        <img src="./images/graduation-icon.png">
-                        <p>Graduation</p>
+                    <div class="gift-occasion-item-box" onclick="change_page('COOKIE_SELECTION_PAGE', 'GIFT_OCCASION', 'GET_WELL_SOON')">
+                        <img src="./images/get_well_icon.png">
+                        <p>Get Well Soon</p>
                     </div>
                     <div class="gift-occasion-item-box" onclick="change_page('COOKIE_SELECTION_PAGE', 'GIFT_OCCASION', 'THANK_YOU')">
                         <img src="./images/thankyou-icon.png">
@@ -61,28 +61,28 @@ var COOKIE_SELECTION_DIV = `
 
         <div class="cookie-selection-cookie-option-item-container">
             <div class="cookie-selection-cookie-option-item">
-                <img src="./images/cookie-break.png">
+                <img src="./images/cookie_images/chocolate_chip.png">
                 <p>Chocolate Chip</p>
                 <label>Input Number of Cookies: </label>
                 <br>
                 <input type="number" placeholder="0" id="chocolate_chip_amount_input">
             </div>
             <div class="cookie-selection-cookie-option-item">
-                <img src="./images/cookie-break.png">
+                <img src="./images/cookie_images/mm.png">
                 <p>M&Ms</p>
                 <label>Input Number of Cookies: </label>
                 <br>
                 <input type="number" placeholder="0" id="mm_amount_input">
             </div>
             <div class="cookie-selection-cookie-option-item">
-                <img src="./images/cookie-break.png">
+                <img src="./images/cookie_images/double_chocolate.png">
                 <p>Double Chocolate</p>
                 <label>Input Number of Cookies: </label>
                 <br>
                 <input type="number" placeholder="0" id="double_chocolate_amount_input">
             </div>
             <div class="cookie-selection-cookie-option-item">
-                <img src="./images/cookie-break.png">
+                <img src="./images/cookie_images/oatmeal.png">
                 <p>Oatmeal</p>
                 <label>Input Number of Cookies: </label>
                 <br>
@@ -105,7 +105,7 @@ var GIFT_ORDER_INFORMATION_PAGE = `
 
                     <!--Image-->
                     <div>
-                        <img src="https://placehold.co/500x500">
+                        <img src="https://placehold.co/500x500" id="gift-image-submit-order" class="gift-image-submit-order-styles">
                     </div>
 
                     <!--Order List-->
@@ -123,7 +123,7 @@ var GIFT_ORDER_INFORMATION_PAGE = `
                     <!--Description-->
                     <div>
                         <b><p>Order Description</p></b>
-                        <p>All gifts will come with a balloon and a card. You can select an extra gift to add to your package. Your will also come with a custom card that you can write a message for at no charge.</p>
+                        <p>Brighten someone's day with a delicious and unique gift with personality. Regardless of the occasion we can gift. Each gift has one teddy bear, one personalized card, and one event topper. We deliver your gift for free!</p>
                         <p style="color:red;">* <span style="color:black;">Required</span></p>
                     </div>
                     <!--
@@ -180,6 +180,14 @@ var GIFT_ORDER_INFORMATION_PAGE = `
                         </div>
                     </div>
 
+                    <br>
+                    <br>
+
+                    <div>
+                        <label>Full Name of Recipient <span style="color:red;">*</span></label><br>
+                        <input type="text" id="full-name-of-recipient"/><br><br>
+                    </div>
+
                     <!-- Delivery Address -->
                     <div>
                         <b><p>Delivery Address</p></b>
@@ -226,7 +234,7 @@ var PERSONAL_ORDER_INFORMATION_PAGE = `
 
                     <!--Image-->
                     <div>
-                        <img src="https://placehold.co/500x500">
+                        <img src="https://placehold.co/500x500" id="personal-image-submit-order" class="gift-image-submit-order-styles">
                     </div>
 
                     <!--Order List-->
@@ -270,6 +278,11 @@ var PERSONAL_ORDER_INFORMATION_PAGE = `
                                 <option value="6-7">6:00pm - 7:00pm</option>
                             </select>
                         </div>
+                    </div>
+                    <br><br>
+                    <div>
+                        <label>Full Name of Recipient <span style="color:red;">*</span></label><br>
+                        <input type="text" id="full-name-of-recipient"/><br><br>
                     </div>
 
                     <!-- Delivery Address -->
@@ -325,6 +338,7 @@ ORDER_VARIABLES.set("DELIVERY_STATE", "MINNESOTA");
 ORDER_VARIABLES.set("ZIP_CODE", "");
 ORDER_VARIABLES.set("SENDER_EMAIL", "");
 ORDER_VARIABLES.set("SENDER_PHONE_NUMBER", "");
+ORDER_VARIABLES.set("NAME_OF_RECIPIENT", "");
 
 
 
@@ -510,9 +524,11 @@ function save_cookie_selection()
     if(ORDER_VARIABLES.get("ORDER_TYPE") == "GIFT")
     {
         populate_order_page("GIFT_ORDER_INFORMATION_PAGE");
+        populate_gift_image_order_page();
     }else if(ORDER_VARIABLES.get("ORDER_TYPE") == "PERSONAL")
     {
         populate_order_page("PERSONAL_ORDER_INFORMATION_PAGE");
+        populate_personal_image_order_page();
     }
     populate_cookie_selection_list();
 
@@ -520,9 +536,37 @@ function save_cookie_selection()
 
 }
 
+function populate_gift_image_order_page()
+{
+    let orderType = ORDER_VARIABLES.get("GIFT_OCCASION");
+
+    if(orderType == "CONGRATULATIONS")
+    {
+        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/congratulations.jpeg";
+    }else if(orderType == "BIRTHDAY")
+    {
+        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/birthday.jpeg";
+    }else if(orderType == "THANK_YOU")
+    {
+        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/thank_you.jpeg";
+    }else if(orderType == "GET_WELL_SOON")
+    {
+        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/get_well_soon.jpeg";
+    }
+}
+
+
+function populate_personal_image_order_page()
+{
+    let orderType = ORDER_VARIABLES.get("PERSONAL");
+
+    document.getElementById('personal-image-submit-order').src = "./images/gift_type_images/personal.jpeg";
+}
+
 function save_all_gift_delivery_information()
 {
     ORDER_VARIABLES.set("CUSTOM_GIFT_MESSAGE", String(document.getElementById("custom-gift-message").value));
+    ORDER_VARIABLES.set("NAME_OF_RECIPIENT", String(document.getElementById("full-name-of-recipient").value));
     ORDER_VARIABLES.set("DELIVERY_DATE", String(document.getElementById("gift-delivery-date").value));
     ORDER_VARIABLES.set("DELIVERY_TIME", String(document.getElementById("gift-delivery-time-ranges").value));
     ORDER_VARIABLES.set("DELIVERY_ADDRESS_1", String(document.getElementById("gift-delivery-address1").value));
@@ -536,6 +580,7 @@ function save_all_gift_delivery_information()
 
 function check_gift_information_validity()
 {
+    let nameOfRecipient = document.getElementById("full-name-of-recipient").value;
     let deliveryDate = document.getElementById("gift-delivery-date").value;
     let deliveryTime = document.getElementById("gift-delivery-time-ranges").value;
     let deliveryAddress = document.getElementById("gift-delivery-address1").value;
@@ -545,7 +590,7 @@ function check_gift_information_validity()
     let senderEmail = document.getElementById("gift-sender-email").value;
     let senderNumber = document.getElementById("gift-sender-number").value;
 
-    if(deliveryDate && deliveryTime && deliveryAddress && deliveryAddress2 && deliveryCity && deliveryZip && senderEmail && senderNumber)
+    if(nameOfRecipient && deliveryDate && deliveryTime && deliveryAddress && deliveryAddress2 && deliveryCity && deliveryZip && senderEmail && senderNumber)
     {
         return true;
     }else
@@ -566,6 +611,7 @@ function gift_proceed_to_payment()
 
 function save_all_personal_delivery_information()
 {
+    ORDER_VARIABLES.set("NAME_OF_RECIPIENT", String(document.getElementById("full-name-of-recipient").value));
     ORDER_VARIABLES.set("DELIVERY_DATE", String(document.getElementById("gift-delivery-date").value));
     ORDER_VARIABLES.set("DELIVERY_TIME", String(document.getElementById("gift-delivery-time-ranges").value));
     ORDER_VARIABLES.set("DELIVERY_ADDRESS_1", String(document.getElementById("gift-delivery-address1").value));
@@ -579,6 +625,7 @@ function save_all_personal_delivery_information()
 
 function check_personal_information_validity()
 {
+    let nameOfRecipient = document.getElementById("full-name-of-recipient").value;
     let deliveryDate = document.getElementById("gift-delivery-date").value;
     let deliveryTime = document.getElementById("gift-delivery-time-ranges").value;
     let deliveryAddress = document.getElementById("gift-delivery-address1").value;
@@ -588,7 +635,7 @@ function check_personal_information_validity()
     let senderEmail = document.getElementById("gift-sender-email").value;
     let senderNumber = document.getElementById("gift-sender-number").value;
 
-    if(deliveryDate && deliveryTime && deliveryAddress && deliveryAddress2 && deliveryCity && deliveryZip && senderEmail && senderNumber)
+    if(nameOfRecipient && deliveryDate && deliveryTime && deliveryAddress && deliveryAddress2 && deliveryCity && deliveryZip && senderEmail && senderNumber)
     {
         return true;
     }else
@@ -676,6 +723,19 @@ function sendMessage(callBack = null)
         if(data["status"] == "success")
         {
             callBack('Successfully sent message!');
+            if(ORDER_VARIABLES.get("ORDER_TYPE") == "PERSONAL" && ORDER_VARIABLES.get("BATCH_OPTION") == "HALF_DOZEN")
+            {
+                window.open("https://buy.stripe.com/5kQaEY8wx2Mb95m9ZffUQ0e", '_self').focus();
+            }else if(ORDER_VARIABLES.get("ORDER_TYPE") == "PERSONAL" && ORDER_VARIABLES.get("BATCH_OPTION") == "DOZEN")
+            {
+                window.open("https://buy.stripe.com/14AcN63cd4Uj6Xe6N3fUQ0f", '_self').focus();
+            }else if(ORDER_VARIABLES.get("ORDER_TYPE") == "GIFT" && ORDER_VARIABLES.get("BATCH_OPTION") == "HALF_DOZEN")
+            {
+                window.open("https://buy.stripe.com/eVq14o289cmLbdu4EVfUQ0g", '_self').focus();
+            }else if(ORDER_VARIABLES.get("ORDER_TYPE") == "GIFT" && ORDER_VARIABLES.get("BATCH_OPTION") == "DOZEN")
+            {
+                window.open("https://buy.stripe.com/dRm14o6op1I7ftKfjzfUQ0h", '_self').focus();
+            }
         }else if(data["status"] == "failed")
         {
             callBack("Failed to send message. Please try again!");
@@ -687,11 +747,6 @@ function sendMessageOnClick()
 {
     sendMessage( function(responseMessage)
         {
-            console.log('Message Sent')
+            console.log('Message Sent');
         });
 }
-
-
-
-
-//email api connection, images, payment link
