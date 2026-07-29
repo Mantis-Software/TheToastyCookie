@@ -6,19 +6,19 @@ var GIFT_OCCASION_TYPE_PAGE = `
 
                 <div class="gift-occasion-options">
                     <div class="gift-occasion-item-box" onclick="change_page('COOKIE_SELECTION_PAGE', 'GIFT_OCCASION', 'BIRTHDAY')">
-                        <img src="./images/birthday-icon.png">
+                        <img src="./images/birthday-icon.png" alt="Birthday Icon" loading=“lazy” decoding=“async”>
                         <p>Birthday</p>
                     </div>
                     <div class="gift-occasion-item-box" onclick="change_page('COOKIE_SELECTION_PAGE', 'GIFT_OCCASION', 'GET_WELL_SOON')">
-                        <img src="./images/get_well_icon.png">
+                        <img src="./images/get_well_icon.png" alt="Get Well Soon Icon" loading=“lazy” decoding=“async”>
                         <p>Get Well Soon</p>
                     </div>
                     <div class="gift-occasion-item-box" onclick="change_page('COOKIE_SELECTION_PAGE', 'GIFT_OCCASION', 'THANK_YOU')">
-                        <img src="./images/thankyou-icon.png">
+                        <img src="./images/thankyou-icon.png" alt="Thank You Icon" loading=“lazy” decoding=“async”>
                         <p>Thank You</p>
                     </div>
                     <div class="gift-occasion-item-box" onclick="change_page('COOKIE_SELECTION_PAGE', 'GIFT_OCCASION', 'CONGRATULATIONS')">
-                        <img src="./images/congratulations-icon.png">
+                        <img src="./images/congratulations-icon.png" alt="Congratulations Icon" loading=“lazy” decoding=“async”>
                         <p>Congratulations</p>
                     </div>
                 </div>
@@ -61,28 +61,28 @@ var COOKIE_SELECTION_DIV = `
 
         <div class="cookie-selection-cookie-option-item-container">
             <div class="cookie-selection-cookie-option-item">
-                <img src="./images/cookie_images/chocolate_chip.png">
+                <img src="./images/cookie_images/chocolate_chip.png" alt="Chocolate Chip Cookie Image" loading=“lazy” decoding=“async”>
                 <p>Chocolate Chip</p>
                 <label>Input Number of Cookies: </label>
                 <br>
                 <input type="number" placeholder="0" id="chocolate_chip_amount_input">
             </div>
             <div class="cookie-selection-cookie-option-item">
-                <img src="./images/cookie_images/mm.png">
+                <img src="./images/cookie_images/mm.png" alt="M&M Cookie Image" loading=“lazy” decoding=“async”>
                 <p>M&Ms</p>
                 <label>Input Number of Cookies: </label>
                 <br>
                 <input type="number" placeholder="0" id="mm_amount_input">
             </div>
             <div class="cookie-selection-cookie-option-item">
-                <img src="./images/cookie_images/double_chocolate.png">
+                <img src="./images/cookie_images/double_chocolate.png" alt="Double Chocolate Cookie Image" loading=“lazy” decoding=“async”>
                 <p>Double Chocolate</p>
                 <label>Input Number of Cookies: </label>
                 <br>
                 <input type="number" placeholder="0" id="double_chocolate_amount_input">
             </div>
             <div class="cookie-selection-cookie-option-item">
-                <img src="./images/cookie_images/oatmeal.png">
+                <img src="./images/cookie_images/oatmeal.png" alt="Oatmeal Raisin Cookie Image" loading=“lazy” decoding=“async”>
                 <p>Oatmeal</p>
                 <label>Input Number of Cookies: </label>
                 <br>
@@ -105,7 +105,7 @@ var GIFT_ORDER_INFORMATION_PAGE = `
 
                     <!--Image-->
                     <div>
-                        <img src="https://placehold.co/500x500" id="gift-image-submit-order" class="gift-image-submit-order-styles">
+                        <img src="https://placehold.co/500x500" id="gift-image-submit-order" class="gift-image-submit-order-styles" alt="Delivery Package Example Image With Teddy Bear, Custom Card, and Custom Topper." loading=“lazy” decoding=“async”>
                     </div>
 
                     <!--Order List-->
@@ -234,7 +234,7 @@ var PERSONAL_ORDER_INFORMATION_PAGE = `
 
                     <!--Image-->
                     <div>
-                        <img src="https://placehold.co/500x500" id="personal-image-submit-order" class="gift-image-submit-order-styles">
+                        <img src="https://placehold.co/500x500" id="personal-image-submit-order" class="gift-image-submit-order-styles" alt="Delivery Package Image" loading=“lazy” decoding=“async”>
                     </div>
 
                     <!--Order List-->
