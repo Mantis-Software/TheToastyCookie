@@ -542,16 +542,16 @@ function populate_gift_image_order_page()
 
     if(orderType == "CONGRATULATIONS")
     {
-        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/congratulations.jpeg";
+        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/congratulations.webp";
     }else if(orderType == "BIRTHDAY")
     {
-        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/birthday.jpeg";
+        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/birthday.webp";
     }else if(orderType == "THANK_YOU")
     {
-        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/thank_you.jpeg";
+        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/thank_you.webp";
     }else if(orderType == "GET_WELL_SOON")
     {
-        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/get_well_soon.jpeg";
+        document.getElementById('gift-image-submit-order').src = "./images/gift_type_images/get_well_soon.webp";
     }
 }
 
@@ -560,7 +560,7 @@ function populate_personal_image_order_page()
 {
     let orderType = ORDER_VARIABLES.get("PERSONAL");
 
-    document.getElementById('personal-image-submit-order').src = "./images/gift_type_images/personal.jpeg";
+    document.getElementById('personal-image-submit-order').src = "./images/gift_type_images/personal.webp";
 }
 
 function save_all_gift_delivery_information()
