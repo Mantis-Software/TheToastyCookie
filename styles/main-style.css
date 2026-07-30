@@ -330,6 +330,67 @@ body
     font-size: 40px;
 }
 
+.explanation-section-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.personal-explanation-item-box
+{
+    width: 40%;
+    background-color: #693922;
+    border-radius: 16px;
+    padding: 40px;
+    font-size: 20px;
+    color: white;
+    height: 250px;
+}
+
+.gift-explanation-item-box
+{
+    width: 40%;
+    background-color: #693922;
+    border-radius: 16px;
+    padding: 40px;
+    font-size: 20px;
+    color: white;
+    height: 250px;
+}
+
+.personal-explanation-item-box-title
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.service-item-order-explanation
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.service-item-order-explanation a 
+{
+    text-decoration: none;
+    color:white;
+    padding-right: 10px;
+}
+
+.service-item-order-arrow
+{
+    width:30px;
+    filter: brightness(0) invert(1);
+
+}
+
+
+
 @media (max-width: 500px)
 {
     body
