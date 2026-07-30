@@ -411,7 +411,7 @@ function change_page(page_name_variable, variable_name_str, variable_value)
 
     if(page_name_variable == "COOKIE_SELECTION_PAGE" && variable_name_str == "GIFT_OCCASION")
     {
-        document.getElementById("hd-batch-price").innerHTML = "$25.00" 
+        document.getElementById("hd-batch-price").innerHTML = "$20.00" 
         document.getElementById("d-batch-price").innerHTML =  "$30.00"
     }
 }
@@ -483,7 +483,7 @@ function populate_cookie_selection_list()
         cookie_list_html += "<br><hr><b><p>Subtotal: $30.00</p></b>"
     }else if(ORDER_VARIABLES.get("BATCH_OPTION") == "HALF_DOZEN" && ORDER_VARIABLES.get("ORDER_TYPE") == "GIFT")
     {
-        cookie_list_html += "<br><hr><b><p>Subtotal: $25.00</p></b>"
+        cookie_list_html += "<br><hr><b><p>Subtotal: $20.00</p></b>"
     }else if(ORDER_VARIABLES.get("BATCH_OPTION") == "DOZEN" && ORDER_VARIABLES.get("ORDER_TYPE") == "PERSONAL")
     {
         cookie_list_html += "<br><hr><b><p>Subtotal: $15.00</p></b>"
@@ -731,7 +731,7 @@ function sendMessage(callBack = null)
                 window.open("https://buy.stripe.com/14AcN63cd4Uj6Xe6N3fUQ0f", '_self').focus();
             }else if(ORDER_VARIABLES.get("ORDER_TYPE") == "GIFT" && ORDER_VARIABLES.get("BATCH_OPTION") == "HALF_DOZEN")
             {
-                window.open("https://buy.stripe.com/eVq14o289cmLbdu4EVfUQ0g", '_self').focus();
+                window.open("https://buy.stripe.com/3cI8wQ5klaeD0yQ8VbfUQ0i", '_self').focus();
             }else if(ORDER_VARIABLES.get("ORDER_TYPE") == "GIFT" && ORDER_VARIABLES.get("BATCH_OPTION") == "DOZEN")
             {
                 window.open("https://buy.stripe.com/dRm14o6op1I7ftKfjzfUQ0h", '_self').focus();
